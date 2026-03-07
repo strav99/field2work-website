@@ -1120,20 +1120,7 @@
     observer.observe(el);
   });
 
-  // Placeholder form submission (replace with Kit embed)
-  const submitBtn = document.getElementById('ck_submit_btn');
-  if (submitBtn) {
-    submitBtn.addEventListener('click', () => {
-      const email = document.getElementById('ck_email_address').value.trim();
-      const name = document.getElementById('ck_first_name').value.trim();
-      if (!email || !name) {
-        submitBtn.textContent = 'Please fill in both fields.';
-        setTimeout(() => { submitBtn.textContent = 'Join the Roster →'; }, 2000);
-        return;
-      }
-      const wrapper = document.getElementById('kit-form-wrapper');
-      wrapper.innerHTML = `
-        <div style="text-align:center; padding: 2rem 0;">
-          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#3db560; letter-spacing:0.05em;">You're on the roster.</div>
-          <p style="color:#d4ccba; margin-top:1rem; font-size:0.95rem; line-height:1.7;">
-        
+
+</script>
+</body>
+</html>
