@@ -1042,22 +1042,24 @@
           <li>A timely take on current events in the world of work.</li>
         </ul>
       </div>
-      <!-- KIT (CONVERTKIT) EMBED — paste your Kit inline form embed code here.
-           Steps: 1) Sign up at kit.com  2) Create a Form → Inline → copy the <script> embed
-           3) Replace this entire comment block and the form div below with the Kit embed code.
-           The .newsletter-form wrapper and its padding/background CSS will still apply. -->
       <div class="newsletter-form" id="kit-form-wrapper">
-        <!-- PLACEHOLDER FORM — replace with Kit embed -->
-        <div class="form-headline">Join The Playbook.</div>
-        <div class="form-sub">A free monthly newsletter for athletes who mean business.</div>
-        <div class="form-group">
-          <input type="text" id="ck_first_name" placeholder="First name" />
-        </div>
-        <div class="form-group">
-          <input type="email" id="ck_email_address" placeholder="Your best email address" />
-        </div>
-        <button class="btn-form" id="ck_submit_btn">Join the Roster →</button>
-        <div class="form-disclaimer">No spam. Unsubscribe anytime.</div>
+        <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+        <form action="https://app.kit.com/forms/9176012/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9176012" data-uid="689dc69667" data-format="inline" data-version="5" min-width="400 500 600 700 800" style="background:transparent;border-radius:0;">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" class="seva-fields formkit-fields" style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="form-group">
+              <input class="formkit-input" name="first_name" aria-label="First Name" placeholder="First name" type="text" style="width:100%;background:var(--green-deep);border:1px solid var(--green-accent);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:0.9rem;padding:0.9rem 1.2rem;outline:none;" />
+            </div>
+            <div class="form-group">
+              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Your best email address" required type="email" style="width:100%;background:var(--green-deep);border:1px solid var(--green-accent);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:0.9rem;padding:0.9rem 1.2rem;outline:none;" />
+            </div>
+            <button data-element="submit" class="formkit-submit btn-form" style="width:100%;background:var(--green-bright);color:var(--green-deep);border:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;padding:1rem;cursor:pointer;">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>Join the Roster →</span>
+            </button>
+          </div>
+          <div class="form-disclaimer" style="font-size:0.68rem;color:var(--green-accent);margin-top:1rem;text-align:center;letter-spacing:0.05em;">No spam. Unsubscribe anytime.</div>
+        </form>
       </div>
     </div>
   </div>
@@ -1095,12 +1097,12 @@
   <div class="footer-links">
     <a href="https://x.com/Field2Work" target="_blank">X / Twitter</a>
     <a href="#subscribe">Newsletter</a>
-    <a href="mailto:scott@field2work.com">Contact</a>
+    <a href="/cdn-cgi/l/email-protection#c8bbaba7bcbc88aea1ada4acfabfa7baa3e6aba7a5">Contact</a>
   </div>
   <div class="footer-copy">© 2026 Field2Work · FieldWork the book · All rights reserved</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Intersection Observer for scroll-triggered fade-ins
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1134,11 +1136,4 @@
         <div style="text-align:center; padding: 2rem 0;">
           <div style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#3db560; letter-spacing:0.05em;">You're on the roster.</div>
           <p style="color:#d4ccba; margin-top:1rem; font-size:0.95rem; line-height:1.7;">
-            Welcome to Field2Work, ${name}.<br>First issue coming soon. Check your inbox.
-          </p>
-        </div>`;
-    });
-  }
-</script>
-</body>
-</html>
+        
