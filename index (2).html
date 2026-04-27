@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FieldWork — How lessons from the playing field translate to success at work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- SEO & Social -->
+<meta name="description" content="FieldWork — the playbook no one handed you when your playing days ended. A book by Scott Travasos. Subscribe to The Playbook, our free quarterly newsletter for athlete-minded professionals.">
+<meta property="og:title" content="FieldWork — How lessons from the playing field translate to success at work">
+<meta property="og:description" content="The playbook no one handed you when your playing days ended.">
+<meta property="og:url" content="https://field2work.com">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://raw.githubusercontent.com/strav99/field2work-website/main/fieldwork-og-card-v4.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Field2Work">
+<meta name="twitter:title" content="FieldWork — How lessons from the playing field translate to success at work">
+<meta name="twitter:description" content="The playbook no one handed you when your playing days ended.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/strav99/field2work-website/main/fieldwork-og-card-v4.png">
+<link rel="canonical" href="https://field2work.com">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%230d2818"/><g stroke="%233db560" stroke-width="1.4" stroke-linecap="round" fill="none"><line x1="6" y1="26" x2="26" y2="26"/><line x1="9" y1="26" x2="9" y2="22"/><line x1="12" y1="26" x2="12" y2="20"/><line x1="15" y1="26" x2="15" y2="17"/><line x1="18" y1="26" x2="18" y2="19"/><line x1="21" y1="26" x2="21" y2="14"/><line x1="24" y1="26" x2="24" y2="10"/></g><path d="M 7 22 L 13 16 L 18 19 L 25 8" stroke="%233db560" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M 23 7 L 27 7 L 25 11 Z" fill="%233db560"/></svg>'>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-deep:   #0d2818;
+    --green-dark:   #14381f;
+    --green-mid:    #1a4a28;
+    --green-accent: #2d7a45;
+    --green-bright: #3db560;
+    --cream:        #f5f0e8;
+    --cream-dim:    #d4ccba;
+    --white:        #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--green-deep);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── FIELD TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 60px,
+        rgba(255,255,255,0.018) 60px,
+        rgba(255,255,255,0.018) 61px
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── WORDMARK ── */
+  /* The brand is FieldWork everywhere — Playfair, Field cream, Work green. */
+  .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .wordmark .field { color: var(--cream); }
+  .wordmark .work  { color: var(--green-bright); }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 4rem;
+    background: linear-gradient(to bottom, rgba(13,40,24,0.97) 0%, rgba(13,40,24,0.85) 70%, transparent 100%);
+    backdrop-filter: blur(2px);
+  }
+
+  nav .brand-mark { display: none; }
+
+  .nav-logo {
+    font-size: 1.6rem;
+    text-decoration: none;
+  }
+
+  nav a.nav-cta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-deep);
+    background: var(--green-bright);
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  nav a.nav-cta:hover { background: var(--cream); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 4rem 6rem;
+    overflow: hidden;
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    bottom: -2rem;
+    right: -1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(12rem, 22vw, 26rem);
+    color: rgba(255,255,255,0.025);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--green-bright);
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--green-bright);
+  }
+
+  .hero h1 {
+    font-size: clamp(7rem, 13vw, 13rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+    color: var(--cream-dim);
+    max-width: 760px;
+    margin: 1.6rem 0 3rem;
+    line-height: 1.45;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--green-bright);
+    color: var(--green-deep);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2.2rem;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-sub {
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.75;
+    margin-top: 0.2rem;
+  }
+
+  .btn-primary:hover {
+    background: var(--cream);
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll-hint {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-accent);
+  }
+
+  /* ── CONCEPTS BAR (static, single row of named concepts) ── */
+  .concepts-bar {
+    background: var(--green-bright);
+    color: var(--green-deep);
+    padding: 1rem 1rem;
+    overflow: hidden;
+  }
+
+  .concepts-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .concepts-bar-inner span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+  }
+
+  .concepts-bar-inner span + span::before {
+    content: '◆';
+    margin-right: 2rem;
+    opacity: 0.5;
+  }
+
+  /* ── SECTION BASE ── */
+  section { position: relative; z-index: 1; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--green-bright);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--green-mid);
+    max-width: 80px;
+  }
+
+  /* ── MANIFESTO ── */
+  .manifesto {
+    padding: 8rem 0;
+    border-top: 1px solid var(--green-mid);
+  }
+
+  .manifesto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .manifesto-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 4.4vw, 4.4rem);
+    line-height: 1.05;
+    color: var(--white);
+  }
+
+  .manifesto-left h2 em {
+    font-style: normal;
+    color: var(--green-bright);
+  }
+
+  .manifesto-right p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--cream-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .manifesto-right p strong {
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--green-mid);
+  }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.2rem;
+    line-height: 1;
+    color: var(--green-bright);
+    letter-spacing: 0.02em;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    margin-top: 0.4rem;
+    line-height: 1.4;
+  }
+
+  .stat-source {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--green-accent);
+    margin-top: 0.5rem;
+  }
+
+  /* ── FOR WHO ── */
+  .forwho {
+    padding: 6rem 0;
+    background: var(--green-dark);
+    border-top: 1px solid var(--green-mid);
+    border-bottom: 1px solid var(--green-mid);
+  }
+
+  .forwho-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .forwho h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 2rem;
+    white-space: nowrap;
+  }
+
+  .forwho h2 em {
+    font-style: normal;
+    color: var(--green-bright);
+  }
+
+  .check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.95rem;
+    color: var(--cream-dim);
+    line-height: 1.5;
+  }
+
+  .check-list li::before {
+    content: '→';
+    color: var(--green-bright);
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .forwho-pull {
+    background: var(--green-mid);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .forwho-pull::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    line-height: 0.6;
+    color: var(--green-accent);
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    opacity: 0.5;
+  }
+
+  .forwho-pull blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.55;
+    color: var(--cream);
+    padding-top: 2rem;
+  }
+
+  .forwho-pull cite {
+    display: block;
+    margin-top: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-bright);
+  }
+
+  /* ── PLAYBOOK / CHAPTERS ── */
+  .playbook {
+    padding: 8rem 0;
+  }
+
+  .playbook-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .playbook-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 4.4vw, 4.4rem);
+    line-height: 1.05;
+    color: var(--white);
+  }
+
+  .playbook-header p {
+    max-width: 340px;
+    font-size: 0.9rem;
+    color: var(--cream-dim);
+    line-height: 1.65;
+  }
+
+  .quarter-divider {
+    background: var(--green-mid);
+    padding: 1.4rem 1.6rem;
+    margin-top: 2.6rem;
+    margin-bottom: 0;
+    border-left: 4px solid var(--green-bright);
+  }
+  .quarter-divider:first-of-type { margin-top: 0; }
+
+  .field-guide-desc {
+    margin-top: 0.7rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--cream-dim);
+    line-height: 1.55;
+    max-width: 620px;
+  }
+
+  .quarter-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--green-bright);
+    margin-bottom: 0.4rem;
+  }
+
+  .quarter-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.15rem;
+    color: #cfdecd;
+    line-height: 1.2;
+  }
+
+  .chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .chapter {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.6rem 0;
+    border-top: 1px solid var(--green-mid);
+    transition: background 0.2s;
+    cursor: default;
+  }
+
+  .quarter-divider + .chapter { border-top: none; }
+
+  .chapter.last-of-quarter { border-bottom: 1px solid var(--green-mid); }
+
+  .chapter:hover { background: rgba(45,122,69,0.08); padding-left: 1rem; padding-right: 1rem; margin: 0 -1rem; }
+
+  .chapter-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--green-accent);
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+
+  .chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+
+  .chapter-sub {
+    font-size: 0.82rem;
+    color: var(--cream-dim);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    padding: 8rem 0;
+    background: var(--green-dark);
+    border-top: 1px solid var(--green-mid);
+  }
+
+  .newsletter-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .newsletter-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2.4rem, 3.8vw, 4rem);
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .newsletter-left h2 em {
+    font-style: normal;
+    color: var(--green-bright);
+    white-space: nowrap;
+  }
+
+  .newsletter-left p {
+    font-size: 1rem;
+    color: var(--cream-dim);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-promises {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .newsletter-promises li {
+    font-size: 0.82rem;
+    color: var(--cream-dim);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .newsletter-promises li::before {
+    content: '◆';
+    font-size: 0.45rem;
+    color: var(--green-bright);
+  }
+
+  .newsletter-form {
+    background: var(--green-mid);
+    padding: 3rem;
+  }
+
+  .form-group { margin-bottom: 1rem; }
+
+  .form-group input {
+    width: 100%;
+    background: var(--green-deep);
+    border: 1px solid var(--green-accent);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.9rem 1.2rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input::placeholder { color: var(--green-accent); }
+  .form-group input:focus { border-color: var(--green-bright); }
+
+  .btn-form {
+    width: 100%;
+    background: var(--green-bright);
+    color: var(--green-deep);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .btn-form:hover { background: var(--cream); }
+
+  .form-disclaimer {
+    font-size: 0.68rem;
+    color: var(--green-accent);
+    margin-top: 1rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: 8rem 0;
+    border-top: 1px solid var(--green-mid);
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .about-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 4.4vw, 4.4rem);
+    line-height: 1.05;
+    color: var(--white);
+  }
+
+  .about-left h2 em {
+    font-style: normal;
+    color: var(--green-bright);
+  }
+
+  .about-credentials {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .cred {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .cred::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--green-bright);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .about-right p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--cream-dim);
+    margin-bottom: 1.4rem;
+  }
+
+  .about-right p strong {
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  .about-tagline {
+    margin-top: 5rem;
+    padding-top: 3.5rem;
+    border-top: 1px solid var(--green-mid);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+    line-height: 1.35;
+    color: var(--cream);
+    text-align: center;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080f0a;
+    border-top: 1px solid var(--green-mid);
+    padding: 4.5rem 4rem 2.5rem;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid var(--green-mid);
+  }
+
+  .footer-mark {
+    width: 220px;
+    height: auto;
+  }
+  .footer-mark svg { width: 100%; height: auto; display: block; }
+
+  .footer-wordmark {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .footer-utility {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 2.2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--green-bright); }
+
+  .footer-copy {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    color: var(--green-accent);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    nav { padding: 1.2rem 1.5rem; }
+    nav a.nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; }
+    .container { padding: 0 1.4rem; }
+
+    .hero { padding: 7rem 1.4rem 4rem; min-height: 90vh; }
+    .hero h1 {
+      font-size: clamp(4rem, 17vw, 7rem);
+      line-height: 1;
+    }
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+      max-width: 100%;
+    }
+    .hero-bg-text { font-size: clamp(6rem, 30vw, 12rem); right: -0.5rem; }
+    .hero-cta-group { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+    .btn-primary { width: 100%; justify-content: center; padding: 1rem 1.5rem; }
+
+    .manifesto { padding: 5rem 0; }
+    .manifesto-grid,
+    .forwho-inner,
+    .newsletter-inner,
+    .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    .manifesto-left h2 { font-size: clamp(2.2rem, 9vw, 3.6rem); }
+
+    .stat-row { flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; padding-top: 2rem; }
+    .stat-item { min-width: 140px; }
+    .stat-num { font-size: 2.4rem; }
+
+    .forwho { padding: 4rem 0; }
+    .forwho h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); white-space: normal; }
+    .forwho-pull { padding: 2rem; }
+    .forwho-pull::before { font-size: 5rem; }
+    .forwho-pull blockquote { font-size: 1.1rem; }
+
+    .playbook { padding: 5rem 0; }
+    .chapter { grid-template-columns: 48px 1fr; gap: 1rem; padding: 1.4rem 0; }
+    .chapter-num { font-size: 1.8rem; }
+    .chapter-title { font-size: 0.95rem; }
+    .chapter-sub { font-size: 0.78rem; }
+    .chapter:hover { padding-left: 0.5rem; padding-right: 0.5rem; margin: 0 -0.5rem; }
+
+    .newsletter { padding: 5rem 0; }
+    .newsletter-form { padding: 2rem 1.5rem; }
+    .newsletter-left h2 { font-size: clamp(2rem, 8vw, 3.2rem); }
+    .newsletter-left h2 em { white-space: normal; }
+
+    .about { padding: 5rem 0; }
+    .about-inner { gap: 2rem; }
+    .about-left h2 { font-size: clamp(2.2rem, 9vw, 3.6rem); }
+    .about-tagline { margin-top: 3rem; padding-top: 2.5rem; font-size: clamp(1.25rem, 5vw, 1.8rem); }
+
+    footer { padding: 3.5rem 1.4rem 2rem; }
+    .footer-brand { gap: 1.2rem; padding-bottom: 2.5rem; }
+    .footer-mark { width: 160px; }
+    .footer-wordmark { font-size: 2.4rem; }
+    .footer-utility {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+      padding-top: 1.8rem;
+    }
+    .footer-links { flex-wrap: wrap; gap: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: clamp(3.2rem, 18vw, 5.5rem); }
+    .hero { padding: 6rem 1.2rem 3rem; }
+    .container { padding: 0 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo wordmark"><span class="field">Field</span><span class="work">Work</span></a>
+  <a href="#subscribe" class="nav-cta">Get The Playbook</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text">WIN</div>
+  <div class="hero-eyebrow">The Book · Coming Soon</div>
+  <h1 class="wordmark"><span class="field">Field</span><span class="work">Work</span></h1>
+  <p class="hero-subtitle">How lessons from the playing field translate to success at work.</p>
+  <div class="hero-cta-group">
+    <a href="#subscribe" class="btn-primary">Subscribe to The Playbook<span class="btn-sub">Our free quarterly newsletter</span></a>
+    <span class="hero-scroll-hint">Scroll to learn more ↓</span>
+  </div>
+</section>
+
+<!-- CONCEPTS BAR -->
+<div class="concepts-bar">
+  <div class="concepts-bar-inner">
+    <span>The Talent Trap</span>
+    <span>The Identity Gap</span>
+    <span>Plus-Minus</span>
+    <span>The Slipstream</span>
+    <span>The Icarus Effect</span>
+  </div>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="container">
+    <div class="manifesto-grid">
+      <div class="manifesto-left">
+        <div class="section-label">The Problem</div>
+        <h2>You played <em>to win.</em> Are you <em>winning at work?</em></h2>
+      </div>
+      <div class="manifesto-right">
+        <p>Millions of working professionals were once athletes. They learned how to prepare, how to keep going when nothing was guaranteed, how to compete inside a system, how to be coached, and how to win.</p>
+        <p>Then they entered the workforce, and the habits stopped translating. The early-career years that should have launched them stalled instead. The drive was still there. The playbook wasn't.</p>
+        <p><strong>The same instincts that made you a competitor are the ones that build a career.</strong> They just need a new field to run on.</p>
+        <div class="stat-row">
+          <div class="stat-item">
+            <div class="stat-num">95%</div>
+            <div class="stat-label">of women C-suite executives played sports</div>
+            <div class="stat-source">EY / espnW Women Athletes Business Network, 2017</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">79%</div>
+            <div class="stat-label">of global employees are not engaged at work</div>
+            <div class="stat-source">Gallup State of the Global Workplace, 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="forwho">
+  <div class="container">
+    <div class="forwho-inner">
+      <div>
+        <div class="section-label">Who It's For</div>
+        <h2>Anyone who&rsquo;s ever <em>competed.</em></h2>
+        <ul class="check-list">
+          <li>You played sports at any level — rec league to Division I — and that experience shaped who you are.</li>
+          <li>You're frustrated that your competitive drive doesn't always translate into career wins.</li>
+          <li>You're early in your career, mid-stride, or stepping into leadership, and you want a playbook for the stage you're in.</li>
+          <li>You aren't looking for another generic business book. You want one that speaks your language.</li>
+        </ul>
+      </div>
+      <div class="forwho-pull">
+        <blockquote>
+          FieldWork is the playbook no one handed you when your playing days ended.
+          <cite>— From FieldWork</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYBOOK / CHAPTERS -->
+<section class="playbook">
+  <div class="container">
+    <div class="playbook-header">
+      <div>
+        <div class="section-label">Inside The Book</div>
+        <h2>The Game Plan</h2>
+      </div>
+      <p>Eight chapters. Four Quarters.<br>One playbook for your career arc.</p>
+    </div>
+    <div class="chapters">
+
+      <div class="quarter-divider">
+        <div class="quarter-label">First Quarter</div>
+        <div class="quarter-title">The Talent Trap</div>
+      </div>
+      <div class="chapter last-of-quarter">
+        <div class="chapter-num">01</div>
+        <div class="chapter-body">
+          <div class="chapter-title">The Rookie Playbook</div>
+          <div class="chapter-sub">Entering a new game.</div>
+        </div>
+      </div>
+
+      <div class="quarter-divider">
+        <div class="quarter-label">Second Quarter</div>
+        <div class="quarter-title">Play the Long Game</div>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">02</div>
+        <div class="chapter-body">
+          <div class="chapter-title">The Reserve</div>
+          <div class="chapter-sub">Preparing for opportunity.</div>
+        </div>
+      </div>
+      <div class="chapter last-of-quarter">
+        <div class="chapter-num">03</div>
+        <div class="chapter-body">
+          <div class="chapter-title">Moving into the Starting Lineup</div>
+          <div class="chapter-sub">Emerging leader.</div>
+        </div>
+      </div>
+
+      <div class="quarter-divider">
+        <div class="quarter-label">Third Quarter</div>
+        <div class="quarter-title">When It's Your Turn to Lead</div>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">04</div>
+        <div class="chapter-body">
+          <div class="chapter-title">The All-Pro</div>
+          <div class="chapter-sub">The go-to director.</div>
+        </div>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">05</div>
+        <div class="chapter-body">
+          <div class="chapter-title">Captains and Quarterbacks</div>
+          <div class="chapter-sub">Everyone is looking to you.</div>
+        </div>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">06</div>
+        <div class="chapter-body">
+          <div class="chapter-title">From Player to Head Coach</div>
+          <div class="chapter-sub">Leading at the highest level.</div>
+        </div>
+      </div>
+      <div class="chapter last-of-quarter">
+        <div class="chapter-num">07</div>
+        <div class="chapter-body">
+          <div class="chapter-title">The Athlete-Entrepreneur</div>
+          <div class="chapter-sub">Competing in the business arena.</div>
+        </div>
+      </div>
+
+      <div class="quarter-divider">
+        <div class="quarter-label">Fourth Quarter</div>
+        <div class="quarter-title">Beyond the Scoreboard</div>
+      </div>
+      <div class="chapter last-of-quarter">
+        <div class="chapter-num">08</div>
+        <div class="chapter-body">
+          <div class="chapter-title">The MVP Mindset</div>
+          <div class="chapter-sub">Winning beyond the game.</div>
+        </div>
+      </div>
+
+      <div class="quarter-divider field-guide-block">
+        <div class="quarter-label">Appendix</div>
+        <div class="quarter-title">The Field Guide</div>
+        <div class="field-guide-desc">Tactical tools and frameworks for every career stage. Designed to be returned to as the reader's needs change.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="subscribe">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-left">
+        <div class="section-label">The Playbook &mdash; <span style="white-space: nowrap;">Free Quarterly Newsletter</span></div>
+        <h2>Field notes.<br><em>Four times a year.</em></h2>
+        <p>Short, sharp career insights for former athletes who want to win at work the same way they won on the field.</p>
+        <ul class="newsletter-promises">
+          <li>Ideas drawn from sports and applied to your career</li>
+          <li>A quick drill — something you can implement at work</li>
+          <li>A timely take on current events in the world of work</li>
+        </ul>
+      </div>
+      <div class="newsletter-form" id="kit-form-wrapper">
+        <form action="https://app.kit.com/forms/9176012/subscriptions" method="post">
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="form-group">
+              <input name="fields[first_name]" placeholder="First name" type="text" />
+            </div>
+            <div class="form-group">
+              <input name="email_address" placeholder="Your best email address" required type="email" />
+            </div>
+            <button type="submit" class="btn-form">Join the Roster →</button>
+          </div>
+          <div class="form-disclaimer">No spam. Unsubscribe anytime.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-left">
+        <div class="section-label">The Author</div>
+        <h2>Built on <em>both</em> fields.</h2>
+        <div class="about-credentials">
+          <div class="cred">CFO of the Year</div>
+          <div class="cred">Cover, CFO Magazine</div>
+          <div class="cred">GM, Carolina Courage (NWSL)</div>
+          <div class="cred">Co-founder &amp; CEO, GreaterGoal</div>
+          <div class="cred">Bay Area Olympic Bid Committee</div>
+          <div class="cred">College varsity soccer player</div>
+          <div class="cred">College coach</div>
+        </div>
+      </div>
+      <div class="about-right">
+        <p>Scott Travasos has spent the first half of his career competing and coaching, and the second half running organizations. What struck him somewhere in between was how the same principles that drove success on the field were sitting dormant in the office.</p>
+        <p>He has held senior executive roles including CFO of Blue Shield of California Foundation, CFO of the Foundation for California Community Colleges, and Chief Administrative Officer at Business for Social Responsibility. He has been a client reference for Workday and FinancialForce, and was featured on the cover of <em>CFO Magazine</em>.</p>
+        <p>In sport, Travasos served as General Manager of the Carolina Courage in the Women's United Soccer Association, the first fully professional women's soccer league in the United States. Under his leadership the team transformed from worst-to-first in a single season. He co-founded and led GreaterGoal, an international sports-based humanitarian nonprofit working in Yemen, Myanmar, Thailand, and Northern Ireland, and served on the board of the Bay Area's Olympic bid committee.</p>
+      </div>
+    </div>
+    <div class="about-tagline">
+      FieldWork is written for the athlete whose field is now the office.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-mark">
+      <svg viewBox="260 85 280 135" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="260" y1="200" x2="518" y2="200" stroke="#cfdecd" stroke-width="2"/>
+        <g stroke="#cfdecd" stroke-width="2" stroke-linecap="round">
+          <line x1="400" y1="193" x2="400" y2="176"/>
+          <line x1="410" y1="193" x2="410" y2="170"/>
+          <line x1="420" y1="193" x2="420" y2="164"/>
+          <line x1="430" y1="193" x2="430" y2="158"/>
+          <line x1="440" y1="193" x2="440" y2="152"/>
+          <line x1="450" y1="193" x2="450" y2="146"/>
+          <line x1="460" y1="193" x2="460" y2="156"/>
+          <line x1="470" y1="193" x2="470" y2="166"/>
+          <line x1="480" y1="193" x2="480" y2="154"/>
+          <line x1="490" y1="193" x2="490" y2="141"/>
+          <line x1="500" y1="193" x2="500" y2="128"/>
+          <line x1="510" y1="193" x2="510" y2="116"/>
+        </g>
+        <path d="M 400 168 L 450 138 L 470 158 L 510 108 L 518 100"
+              stroke="#cfdecd" stroke-width="2.2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 514 96 L 524 98 L 518 108 Z" fill="#cfdecd"/>
+        <circle cx="275" cy="170" r="6" stroke="#cfdecd" stroke-width="2" fill="#0f3320"/>
+        <g stroke="#cfdecd" stroke-width="2" stroke-linecap="round" fill="none">
+          <line x1="269" y1="134" x2="281" y2="146"/>
+          <line x1="281" y1="134" x2="269" y2="146"/>
+        </g>
+        <circle cx="310" cy="188" r="6.5" fill="#cfdecd"/>
+        <g stroke="#cfdecd" stroke-width="2" stroke-linecap="round" fill="none">
+          <line x1="304" y1="134" x2="316" y2="146"/>
+          <line x1="316" y1="134" x2="304" y2="146"/>
+        </g>
+        <g stroke="#cfdecd" stroke-width="2" stroke-linecap="round" fill="none">
+          <line x1="337" y1="114" x2="349" y2="126"/>
+          <line x1="349" y1="114" x2="337" y2="126"/>
+        </g>
+        <circle cx="353" cy="150" r="6" stroke="#cfdecd" stroke-width="2" fill="#0f3320"/>
+        <g stroke="#cfdecd" stroke-width="2" stroke-linecap="round" fill="none">
+          <line x1="374" y1="142" x2="386" y2="154"/>
+          <line x1="386" y1="142" x2="374" y2="154"/>
+        </g>
+        <circle cx="380" cy="164" r="6" stroke="#cfdecd" stroke-width="2" fill="#0f3320"/>
+        <path d="M 275 164 Q 285 145, 295 130 Q 302 115, 305 108"
+              stroke="#cfdecd" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 300 106 L 308 102 L 308 114 Z" fill="#cfdecd"/>
+        <line x1="320" y1="142" x2="347" y2="150" stroke="#cfdecd" stroke-width="2" stroke-linecap="round"/>
+        <line x1="318" y1="148" x2="322" y2="136" stroke="#cfdecd" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="322" cy="210" r="6" stroke="#cfdecd" stroke-width="2" fill="#0f3320"/>
+        <path d="M 328 210 C 360 217, 392 200, 400 168"
+              stroke="#cfdecd" stroke-width="1.8" fill="none"
+              stroke-linecap="round" stroke-dasharray="4 4"/>
+        <path d="M 395 164 L 405 166 L 400 174 Z" fill="#cfdecd"/>
+      </svg>
+    </div>
+    <div class="footer-wordmark wordmark"><span class="field">Field</span><span class="work">Work</span></div>
+  </div>
+  <div class="footer-utility">
+    <div class="footer-links">
+      <a href="https://x.com/Field2Work" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="#subscribe">Newsletter</a>
+      <a href="mailto:scott@field2work.com">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 FieldWork · All rights reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
