@@ -8,17 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!-- SEO & Social -->
-<meta name="description" content="FieldWork — the playbook no one handed you when your playing days ended. A book by Scott Travasos.">
+<meta name="description" content="FieldWork, a book by Scott Travasos. The definition of winning changes at every stage of a career. A playbook for former athletes building careers after the game.">
 <meta property="og:title" content="FieldWork — How lessons from the playing field translate to success at work">
-<meta property="og:description" content="The playbook no one handed you when your playing days ended.">
+<meta property="og:description" content="The definition of winning changes at every stage of a career. A book by Scott Travasos.">
 <meta property="og:url" content="https://field2work.com">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://raw.githubusercontent.com/strav99/field2work-website/main/fieldwork-og-card-v4.png">
+<meta property="og:image" content="https://field2work.com/fieldwork-og-card-v5.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@Field2Work">
 <meta name="twitter:title" content="FieldWork — How lessons from the playing field translate to success at work">
-<meta name="twitter:description" content="The playbook no one handed you when your playing days ended.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/strav99/field2work-website/main/fieldwork-og-card-v4.png">
+<meta name="twitter:description" content="The definition of winning changes at every stage of a career. A book by Scott Travasos.">
+<meta name="twitter:image" content="https://field2work.com/fieldwork-og-card-v5.png">
 <link rel="canonical" href="https://field2work.com">
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%230d2818"/><g stroke="%233db560" stroke-width="1.4" stroke-linecap="round" fill="none"><line x1="6" y1="26" x2="26" y2="26"/><line x1="9" y1="26" x2="9" y2="22"/><line x1="12" y1="26" x2="12" y2="20"/><line x1="15" y1="26" x2="15" y2="17"/><line x1="18" y1="26" x2="18" y2="19"/><line x1="21" y1="26" x2="21" y2="14"/><line x1="24" y1="26" x2="24" y2="10"/></g><path d="M 7 22 L 13 16 L 18 19 L 25 8" stroke="%233db560" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M 23 7 L 27 7 L 25 11 Z" fill="%233db560"/></svg>'>
 <style>
@@ -292,7 +291,7 @@
   .manifesto-left h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: clamp(2.6rem, 4.4vw, 4.4rem);
+    font-size: clamp(2.2rem, 3.3vw, 3.3rem);
     line-height: 1.05;
     color: var(--white);
   }
@@ -369,7 +368,6 @@
     line-height: 1.2;
     color: var(--white);
     margin-bottom: 2rem;
-    white-space: nowrap;
   }
 
   .forwho h2 em {
@@ -797,8 +795,136 @@
     letter-spacing: 0.08em;
   }
 
+  /* ── HERO THESIS ── */
+  .hero-thesis {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+    color: var(--cream);
+    max-width: 620px;
+    margin: -1.6rem 0 3rem;
+    padding-left: 1.1rem;
+    border-left: 3px solid var(--green-bright);
+    line-height: 1.6;
+  }
+
+  .stat-source a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(45,122,69,0.5); }
+  .stat-source a:hover { color: var(--green-bright); }
+
+  /* ── IDEAS ── */
+  .ideas {
+    padding: 7rem 0;
+    background: var(--green-dark);
+    border-top: 1px solid var(--green-mid);
+  }
+  .ideas h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 3rem;
+    max-width: 760px;
+  }
+  .ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .idea {
+    background: var(--green-mid);
+    border-top: 3px solid var(--green-bright);
+    padding: 2rem 1.8rem 2.2rem;
+  }
+  .idea-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+  }
+  .idea p {
+    font-size: 0.95rem;
+    color: var(--cream-dim);
+    line-height: 1.65;
+  }
+
+  /* ── IN EVERY CHAPTER / PART TWO ── */
+  .book-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .book-extra .quarter-divider { margin-top: 0; }
+
+  /* ── COLLEGES ── */
+  .colleges {
+    padding: 7rem 0;
+    border-top: 1px solid var(--green-mid);
+  }
+  .colleges-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 6rem;
+    align-items: start;
+  }
+  .colleges h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+    line-height: 1.1;
+    color: var(--white);
+  }
+  .colleges h2 em { font-style: normal; color: var(--green-bright); }
+  .colleges-right p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--cream-dim);
+    margin-bottom: 1.4rem;
+  }
+  .colleges-right p strong { color: var(--cream); font-weight: 500; }
+  .colleges-right a { color: var(--green-bright); text-decoration: none; border-bottom: 1px solid var(--green-accent); }
+
+  /* ── CONTACT + UPDATES ── */
+  .contact-email {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green-deep);
+    background: var(--green-bright);
+    padding: 0.9rem 1.6rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .contact-email:hover { background: var(--cream); }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .form-intro {
+    font-size: 0.9rem;
+    color: var(--cream-dim);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 860px) {
+    .hero-thesis { margin: -1.2rem 0 2.2rem; }
+    .ideas, .colleges { padding: 5rem 0; }
+    .ideas-grid, .book-extra { grid-template-columns: 1fr; gap: 1.2rem; }
+    .colleges-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .concepts-bar-inner { gap: 0.4rem 1.4rem; }
+    .concepts-bar-inner span + span::before { display: none; }
     nav { padding: 1.2rem 1.5rem; }
     nav a.nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; }
     .container { padding: 0 1.4rem; }
@@ -885,8 +1011,9 @@
   <div class="hero-eyebrow">The Book · Coming Soon</div>
   <h1 class="wordmark"><span class="field">Field</span><span class="work">Work</span></h1>
   <p class="hero-subtitle">How lessons from the playing field translate to success at work.</p>
+  <p class="hero-thesis">The definition of winning changes at every stage of a career. The costly mistake is to keep playing by a scoreboard that no longer applies.</p>
   <div class="hero-cta-group">
-    <a href="#contact" class="btn-primary">Get in Touch<span class="btn-sub">scott@field2work.com</span></a>
+    <a href="#updates" class="btn-primary">Get Book Updates<span class="btn-sub">One email when the book is announced</span></a>
     <span class="hero-scroll-hint">Scroll to learn more ↓</span>
   </div>
 </section>
@@ -901,28 +1028,28 @@
   </div>
 </div>
 
-<!-- MANIFESTO -->
+<!-- THE PROBLEM -->
 <section class="manifesto">
   <div class="container">
     <div class="manifesto-grid">
       <div class="manifesto-left">
         <div class="section-label">The Problem</div>
-        <h2>You played <em>to win.</em> Are you <em>winning at work?</em></h2>
+        <h2>You knew how to <em>win on the field.</em> At work, the scoreboard <em>keeps changing.</em></h2>
       </div>
       <div class="manifesto-right">
-        <p>Millions of working professionals were once athletes. They learned how to prepare, how to keep going when nothing was guaranteed, how to compete inside a system, how to be coached, and how to win.</p>
-        <p>Then they entered the workforce, and the habits stopped translating. The early-career years that should have launched them stalled instead. The drive never went anywhere. What they were missing was a playbook for the new game.</p>
-        <p><strong>The instincts that made you a competitor are the same ones that make a career.</strong> Nobody showed you how to use them here.</p>
+        <p>Millions of working professionals grew up playing sports. They know how to prepare and how to take coaching.</p>
+        <p>Then work changes the rules. A boss isn&rsquo;t always a coach, and doing your job well doesn&rsquo;t necessarily earn the next promotion. Effort aimed at the wrong scoreboard goes unnoticed.</p>
+        <p>Scott Travasos learned this the hard way. His department beat its profit plan by millions, and he walked into his annual review expecting praise. His CEO took him to task for missing goals he had considered minor. <strong>He was keeping one scoreboard. She was keeping another.</strong></p>
         <div class="stat-row">
           <div class="stat-item">
             <div class="stat-num">94%</div>
-            <div class="stat-label">of women C-suite executives played sports</div>
-            <div class="stat-source">EY / espnW, Making the Connection, 2014</div>
+            <div class="stat-label">of women executives surveyed had played sport</div>
+            <div class="stat-source"><a href="https://espnpressroom.com/press-release/female-executives-say-participation-in-sport-helps-accelerate-leadership-and-career-potential/" target="_blank" rel="noopener">EY / espnW, 2014</a></div>
           </div>
           <div class="stat-item">
-            <div class="stat-num">80%</div>
-            <div class="stat-label">of global employees are not engaged at work</div>
-            <div class="stat-source">Gallup State of the Global Workplace, 2026</div>
+            <div class="stat-num">8.4M</div>
+            <div class="stat-label">high school sports participations in 2025&ndash;26</div>
+            <div class="stat-source"><a href="https://nfhs.org/stories/led-by-girls-flag-football-and-girls-wrestling-high-school-sports-participation-increases-for-fifth-consecutive-year" target="_blank" rel="noopener">NFHS, 2026</a></div>
           </div>
         </div>
       </div>
@@ -930,31 +1057,51 @@
   </div>
 </section>
 
-<!-- FOR WHO -->
+<!-- WHAT THE BOOK ARGUES -->
+<section class="ideas">
+  <div class="container">
+    <div class="section-label">What the Book Argues</div>
+    <h2>Your athletic habits are a starting point, not a finished game plan.</h2>
+    <div class="ideas-grid">
+      <div class="idea">
+        <div class="idea-title">The scoreboard changes</div>
+        <p>What makes you successful in your first job won&rsquo;t necessarily make you successful as a manager, an executive or a founder. Each stage keeps score differently.</p>
+      </div>
+      <div class="idea">
+        <div class="idea-title">Some habits carry over. Some don&rsquo;t.</div>
+        <p>Preparation and coachability travel well. Waiting for the coach to tell you what to do doesn&rsquo;t. <em>FieldWork</em> sorts out which is which.</p>
+      </div>
+      <div class="idea">
+        <div class="idea-title">Life has two scorecards</div>
+        <p>One tracks titles and salary. The other tracks relationships and the people you helped along the way. Both are being scored from the first job on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
 <section class="forwho">
   <div class="container">
     <div class="forwho-inner">
       <div>
-        <div class="section-label">Who It's For</div>
-        <h2>Anyone who&rsquo;s ever <em>competed.</em></h2>
+        <div class="section-label">Who It&rsquo;s For</div>
+        <h2>For athletes building <em>careers after the game.</em></h2>
         <ul class="check-list">
-          <li>You played sports at any level — rec league to Division I — and that experience shaped who you are.</li>
-          <li>You're frustrated that your competitive drive doesn't always translate into career wins.</li>
-          <li>You're early in your career, mid-stride, or stepping into leadership, and you want a playbook for the stage you're in.</li>
-          <li>You've read the business books. This one was written by someone who played.</li>
+          <li>You played at any level, from rec league to Division I, and it shaped how you work.</li>
+          <li>You work hard, but what your employer values isn&rsquo;t always obvious.</li>
+          <li>You&rsquo;re starting your first job, taking responsibility for a team, or figuring out what comes next.</li>
         </ul>
       </div>
       <div class="forwho-pull">
         <blockquote>
-          FieldWork is the playbook no one handed you when your playing days ended.
-          <cite>— From FieldWork</cite>
+          <em>FieldWork</em> is the playbook no one handed you when your playing days ended.
         </blockquote>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PLAYBOOK / CHAPTERS -->
+<!-- INSIDE THE BOOK -->
 <section class="playbook">
   <div class="container">
     <div class="playbook-header">
@@ -962,7 +1109,7 @@
         <div class="section-label">Inside The Book</div>
         <h2>The Game Plan</h2>
       </div>
-      <p>Eight chapters in four quarters, following a career from rookie year to the head coach's office.</p>
+      <p>Eight chapters in four quarters, from a rookie&rsquo;s first job through executive leadership and entrepreneurship, and finally to what the career was for.</p>
     </div>
     <div class="chapters">
 
@@ -974,7 +1121,7 @@
         <div class="chapter-num">01</div>
         <div class="chapter-body">
           <div class="chapter-title">The Rookie Playbook</div>
-          <div class="chapter-sub">Entering a new game.</div>
+          <div class="chapter-sub">Past success doesn&rsquo;t guarantee success in the next role.</div>
         </div>
       </div>
 
@@ -986,26 +1133,26 @@
         <div class="chapter-num">02</div>
         <div class="chapter-body">
           <div class="chapter-title">The Reserve</div>
-          <div class="chapter-sub">Preparing for opportunity.</div>
+          <div class="chapter-sub">Finding your place when the old measures of success disappear.</div>
         </div>
       </div>
       <div class="chapter last-of-quarter">
         <div class="chapter-num">03</div>
         <div class="chapter-body">
           <div class="chapter-title">Moving into the Starting Lineup</div>
-          <div class="chapter-sub">Emerging leader.</div>
+          <div class="chapter-sub">Running the offense, not just scoring.</div>
         </div>
       </div>
 
       <div class="quarter-divider">
         <div class="quarter-label">Third Quarter</div>
-        <div class="quarter-title">When It's Your Turn to Lead</div>
+        <div class="quarter-title">When It&rsquo;s Your Turn to Lead</div>
       </div>
       <div class="chapter">
         <div class="chapter-num">04</div>
         <div class="chapter-body">
           <div class="chapter-title">The All-Pro</div>
-          <div class="chapter-sub">The go-to director.</div>
+          <div class="chapter-sub">Your value is measured more and more by how much better you make others.</div>
         </div>
       </div>
       <div class="chapter">
@@ -1019,14 +1166,14 @@
         <div class="chapter-num">06</div>
         <div class="chapter-body">
           <div class="chapter-title">From Player to Head Coach</div>
-          <div class="chapter-sub">Leading at the highest level.</div>
+          <div class="chapter-sub">When you&rsquo;re the one setting the organization&rsquo;s scoreboard.</div>
         </div>
       </div>
       <div class="chapter last-of-quarter">
         <div class="chapter-num">07</div>
         <div class="chapter-body">
           <div class="chapter-title">The Athlete-Entrepreneur</div>
-          <div class="chapter-sub">Competing in the business arena.</div>
+          <div class="chapter-sub">Choosing which game to play and what success will mean.</div>
         </div>
       </div>
 
@@ -1038,31 +1185,39 @@
         <div class="chapter-num">08</div>
         <div class="chapter-body">
           <div class="chapter-title">The MVP Mindset</div>
-          <div class="chapter-sub">Winning beyond the game.</div>
+          <div class="chapter-sub">Life has two scorecards. Are you winning on both?</div>
         </div>
       </div>
 
-      <div class="quarter-divider field-guide-block">
-        <div class="quarter-label">Appendix</div>
-        <div class="quarter-title">The Field Guide</div>
-        <div class="field-guide-desc">Practical tools for each stage of a career, meant to be picked up again as the job changes.</div>
-      </div>
+    </div>
 
+    <div class="book-extra">
+      <div class="quarter-divider field-guide-block">
+        <div class="quarter-label">In Every Chapter</div>
+        <div class="quarter-title">Field Notes</div>
+        <div class="field-guide-desc">Each chapter ends with a profile of someone worth studying, specific moves under three headings (Work, Improve, Navigate), practice drills and space to write.</div>
+      </div>
+      <div class="quarter-divider field-guide-block">
+        <div class="quarter-label">Part Two</div>
+        <div class="quarter-title">The Field Manual</div>
+        <div class="field-guide-desc">Nine practical modules for problems that come up at any stage: negotiating pay, working with a boss, hiring, firing and getting through a slump. Written to be used again as the job changes.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="newsletter" id="contact">
+<!-- COLLEGES -->
+<section class="colleges" id="colleges">
   <div class="container">
-    <div class="newsletter-inner">
-      <div class="newsletter-left">
-        <div class="section-label">Contact</div>
-        <h2>Get in <em>touch.</em></h2>
-        <p>Questions about the book, speaking, or working together: email Scott directly.</p>
+    <div class="colleges-inner">
+      <div>
+        <div class="section-label">For Colleges</div>
+        <h2>For colleges and <em>athletic programs.</em></h2>
       </div>
-      <div class="newsletter-form">
-        <a href="mailto:scott@field2work.com" class="btn-form" style="display:block;text-align:center;text-decoration:none;margin-top:0;">scott@field2work.com</a>
+      <div class="colleges-right">
+        <p><em>FieldWork</em> is written for athletes moving from competitive sport into professional life, which makes it a natural fit for student-athlete development programs and career-readiness courses.</p>
+        <p>Speaking topics include <strong>the Talent Trap</strong>, <strong>the Identity Gap</strong> and <strong>the Two Scorecards</strong>. An academic edition with classroom exercises is in development.</p>
+        <p>For speaking or program inquiries, email <a href="mailto:scott@field2work.com">scott@field2work.com</a>.</p>
       </div>
     </div>
   </div>
@@ -1075,24 +1230,50 @@
       <div class="about-left">
         <div class="section-label">The Author</div>
         <div class="about-credentials">
+          <div class="cred">President &amp; GM, Carolina Courage (WUSA)</div>
+          <div class="cred">2002 WUSA champions</div>
           <div class="cred">CFO of the Year</div>
           <div class="cred">Cover, CFO Magazine</div>
-          <div class="cred">GM, Carolina Courage (WUSA)</div>
           <div class="cred">Co-founder &amp; CEO, GreaterGoal</div>
-          <div class="cred">Bay Area Olympic Bid Committee</div>
-          <div class="cred">College and USISL soccer player</div>
-          <div class="cred">Head college coach</div>
-          <div class="cred">High school coach</div>
+          <div class="cred">Bay Area Olympic bid committee</div>
+          <div class="cred">College coach</div>
+          <div class="cred">College and USISL player</div>
         </div>
       </div>
       <div class="about-right">
-        <p>Scott Travasos has spent the first half of his career competing and coaching, and the second half running organizations. What struck him somewhere in between was how the same principles that drove success on the field were sitting dormant in the office.</p>
-        <p>He has held senior executive roles including CFO of Blue Shield of California Foundation, CFO of the Foundation for California Community Colleges, and Chief Administrative Officer at Business for Social Responsibility. He has been a client reference for Workday and FinancialForce, and was featured on the cover of <em>CFO Magazine</em>.</p>
-        <p>In sport, Travasos served as General Manager of the Carolina Courage in the Women's United Soccer Association, the first fully professional women's soccer league in the United States. The team went from last place to first in one season. He co-founded and led GreaterGoal, an international sports-based humanitarian nonprofit working in Yemen, Myanmar, Thailand, and Northern Ireland, and served on the board of the Bay Area's Olympic bid committee.</p>
+        <p>Scott Travasos has played, coached, run a professional soccer team, served as a CFO and started companies. Even after years in business, he kept relearning habits that had made him successful on the field, because each new role changed what counted as a win.</p>
+        <p>In sport, he was Team President and General Manager of the Carolina Courage in the Women&rsquo;s United Soccer Association, the first fully professional women&rsquo;s soccer league in the United States. Led by U.S. National Team captain Carla Overbeck, the Courage went from worst to first in a single season and won the 2002 league championship. He co-founded and led GreaterGoal, a sports-based humanitarian nonprofit that took American teams to play the national teams of Yemen, Myanmar, Thailand and Northern Ireland, and served on the board of the Bay Area&rsquo;s Olympic bid committee. Today he serves on the board of Champions United FC, which mentors children through soccer in Uganda.</p>
+        <p>In business, he was Chief Financial Officer of Blue Shield of California Foundation, where he was named CFO of the Year; CFO of the Foundation for California Community Colleges; and Chief Administrative Officer at Business for Social Responsibility. He has appeared on the cover of <em>CFO Magazine</em>.</p>
+        <p>He played soccer at Wheaton College in Illinois and holds an MBA from Wake Forest University. He lives in San Diego.</p>
       </div>
     </div>
-    <div class="about-tagline">
-      FieldWork is written for the athlete whose field is now the office.
+  </div>
+</section>
+
+<!-- CONTACT + UPDATES -->
+<section class="newsletter" id="contact">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-left">
+        <div class="section-label">Contact</div>
+        <h2>Get in <em>touch.</em></h2>
+        <p>For publishing, speaking and athletic-program inquiries, email Scott directly.</p>
+        <a href="mailto:scott@field2work.com" class="contact-email">scott@field2work.com</a>
+      </div>
+      <div class="newsletter-form" id="updates">
+        <div class="form-title">Book updates</div>
+        <p class="form-intro">Get one email when <em>FieldWork</em> is announced, and another when it&rsquo;s available.</p>
+        <form action="https://app.kit.com/forms/9176012/subscriptions" method="post">
+          <div class="form-group">
+            <input name="fields[first_name]" placeholder="First name" type="text" aria-label="First name">
+          </div>
+          <div class="form-group">
+            <input name="email_address" placeholder="Email address" required type="email" aria-label="Email address">
+          </div>
+          <button type="submit" class="btn-form">Notify Me</button>
+          <div class="form-disclaimer">Book news only. Unsubscribe anytime.</div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -1157,7 +1338,7 @@
   </div>
   <div class="footer-utility">
     <div class="footer-links">
-      <a href="https://x.com/Field2Work" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="#colleges">For Colleges</a>
       <a href="mailto:scott@field2work.com">Contact</a>
     </div>
     <div class="footer-copy">© 2026 FieldWork · All rights reserved</div>
