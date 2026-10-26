@@ -666,6 +666,9 @@
   .form-thanks .form-title { margin-bottom: 0.4rem; }
   .form-thanks p { font-size: 0.95rem; color: var(--cream-dim); line-height: 1.6; }
   .sent .form-thanks { display: block; }
+  .form-error { display: none; margin-top: 1rem; font-size: 0.85rem; color: #f2b8a8; line-height: 1.5; }
+  .form-error a { color: var(--cream); }
+  .btn-form:disabled { opacity: 0.7; cursor: default; }
   .sent #contact-form, .sent .contact-form-head { display: none; }
 
   .btn-form {
@@ -1305,11 +1308,11 @@
           <div class="form-title">Send a message</div>
           <p class="form-intro">Choose &ldquo;Book updates only&rdquo; to get an email when <em>FieldWork</em> is announced.</p>
         </div>
-        <form id="contact-form" action="https://formsubmit.co/scott@field2work.com" method="POST">
-          <input type="hidden" name="_subject" id="form-subject" value="FieldWork site: new message">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://field2work.com/?sent=1#contact">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="4f6144c3-9aa3-43f0-875c-15b39949a8da">
+          <input type="hidden" name="subject" id="form-subject" value="FieldWork site: new message">
+          <input type="hidden" name="from_name" value="FieldWork website">
+          <input type="checkbox" name="botcheck" class="form-honey" tabindex="-1" aria-hidden="true">
           <div class="form-group">
             <input name="name" id="form-name" placeholder="Name" type="text" required aria-label="Name">
           </div>
@@ -1328,7 +1331,8 @@
           <div class="form-group">
             <textarea name="message" placeholder="Message (optional)" aria-label="Message"></textarea>
           </div>
-          <button type="submit" class="btn-form">Send</button>
+          <button type="submit" class="btn-form" id="form-send">Send</button>
+          <div class="form-error" id="form-error" role="alert">Sorry, that didn&rsquo;t go through. Please email <a href="mailto:scott@field2work.com">scott@field2work.com</a> directly.</div>
           <div class="form-disclaimer">Goes straight to Scott. Never shared.</div>
         </form>
         <div class="form-thanks" role="status">
@@ -1353,10 +1357,28 @@
     }
     name.addEventListener('input', setSubject);
     topic.addEventListener('change', setSubject);
-    form.addEventListener('submit', setSubject);
-    if (/[?&]sent=1/.test(window.location.search)) {
-      document.getElementById('updates').classList.add('sent');
-    }
+    var box = document.getElementById('updates');
+    var btn = document.getElementById('form-send');
+    var err = document.getElementById('form-error');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      setSubject();
+      err.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Sending\u2026';
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && d.success) { box.classList.add('sent'); form.reset(); }
+          else { throw new Error((d && d.message) || 'failed'); }
+        })
+        .catch(function () { err.style.display = 'block'; })
+        .then(function () { btn.disabled = false; btn.textContent = 'Send'; });
+    });
   })();
 </script>
 
