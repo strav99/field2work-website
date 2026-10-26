@@ -628,6 +628,46 @@
   .form-group input::placeholder { color: var(--green-accent); }
   .form-group input:focus { border-color: var(--green-bright); }
 
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--green-deep);
+    border: 1px solid var(--green-accent);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.9rem 1.2rem;
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: 0;
+  }
+  .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #3db560 50%), linear-gradient(135deg, #3db560 50%, transparent 50%);
+    background-position: calc(100% - 22px) 50%, calc(100% - 16px) 50%;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 2.8rem;
+    cursor: pointer;
+  }
+  .form-group select:invalid { color: var(--green-accent); }
+  .form-group select option { color: var(--cream); background: var(--green-deep); }
+  .form-group textarea { resize: vertical; min-height: 110px; line-height: 1.5; }
+  .form-group textarea::placeholder { color: var(--green-accent); }
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--green-bright); }
+  .form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-thanks {
+    display: none;
+    border-left: 3px solid var(--green-bright);
+    padding: 0.4rem 0 0.4rem 1.1rem;
+  }
+  .form-thanks .form-title { margin-bottom: 0.4rem; }
+  .form-thanks p { font-size: 0.95rem; color: var(--cream-dim); line-height: 1.6; }
+  .sent .form-thanks { display: block; }
+  .sent #contact-form, .sent .contact-form-head { display: none; }
+
   .btn-form {
     width: 100%;
     background: var(--green-bright);
@@ -1013,7 +1053,7 @@
   <p class="hero-subtitle">How lessons from the playing field translate to success at work.</p>
   <p class="hero-thesis">The definition of winning changes at every stage of a career. The costly mistake is to keep playing by a scoreboard that no longer applies.</p>
   <div class="hero-cta-group">
-    <a href="#updates" class="btn-primary">Get Book Updates<span class="btn-sub">One email when the book is announced</span></a>
+    <a href="#contact" class="btn-primary">Get in Touch<span class="btn-sub">Publishing, speaking or book updates</span></a>
     <span class="hero-scroll-hint">Scroll to learn more ↓</span>
   </div>
 </section>
@@ -1250,33 +1290,76 @@
   </div>
 </section>
 
-<!-- CONTACT + UPDATES -->
+<!-- CONTACT -->
 <section class="newsletter" id="contact">
   <div class="container">
     <div class="newsletter-inner">
       <div class="newsletter-left">
         <div class="section-label">Contact</div>
         <h2>Get in <em>touch.</em></h2>
-        <p>For publishing, speaking and athletic-program inquiries, email Scott directly.</p>
+        <p>For publishing, speaking and athletic-program inquiries, email Scott directly or use the form.</p>
         <a href="mailto:scott@field2work.com" class="contact-email">scott@field2work.com</a>
       </div>
       <div class="newsletter-form" id="updates">
-        <div class="form-title">Book updates</div>
-        <p class="form-intro">Get one email when <em>FieldWork</em> is announced, and another when it&rsquo;s available.</p>
-        <form action="https://app.kit.com/forms/9176012/subscriptions" method="post">
+        <div class="contact-form-head">
+          <div class="form-title">Send a message</div>
+          <p class="form-intro">Choose &ldquo;Book updates only&rdquo; to get an email when <em>FieldWork</em> is announced.</p>
+        </div>
+        <form id="contact-form" action="https://formsubmit.co/scott@field2work.com" method="POST">
+          <input type="hidden" name="_subject" id="form-subject" value="FieldWork site: new message">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://field2work.com/?sent=1#contact">
+          <div class="form-honey" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
           <div class="form-group">
-            <input name="fields[first_name]" placeholder="First name" type="text" aria-label="First name">
+            <input name="name" id="form-name" placeholder="Name" type="text" required aria-label="Name">
           </div>
           <div class="form-group">
-            <input name="email_address" placeholder="Email address" required type="email" aria-label="Email address">
+            <input name="email" placeholder="Email address" type="email" required aria-label="Email address">
           </div>
-          <button type="submit" class="btn-form">Notify Me</button>
-          <div class="form-disclaimer">Book news only. Unsubscribe anytime.</div>
+          <div class="form-group">
+            <select name="topic" id="form-topic" required aria-label="What is this about?">
+              <option value="" disabled selected>What&rsquo;s this about?</option>
+              <option>Book updates only</option>
+              <option>Publishing</option>
+              <option>Speaking or campus programs</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Message (optional)" aria-label="Message"></textarea>
+          </div>
+          <button type="submit" class="btn-form">Send</button>
+          <div class="form-disclaimer">Goes straight to Scott. Never shared.</div>
         </form>
+        <div class="form-thanks" role="status">
+          <div class="form-title">Thanks.</div>
+          <p>Your message is on its way to Scott.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var form = document.getElementById('contact-form');
+    var subject = document.getElementById('form-subject');
+    var name = document.getElementById('form-name');
+    var topic = document.getElementById('form-topic');
+    function setSubject() {
+      var t = topic.value || 'New message';
+      var n = name.value.trim();
+      subject.value = 'FieldWork site: ' + t + (n ? ', from ' + n : '');
+    }
+    name.addEventListener('input', setSubject);
+    topic.addEventListener('change', setSubject);
+    form.addEventListener('submit', setSubject);
+    if (/[?&]sent=1/.test(window.location.search)) {
+      document.getElementById('updates').classList.add('sent');
+    }
+  })();
+</script>
 
 <!-- FOOTER -->
 <footer>
