@@ -878,6 +878,40 @@
   }
   .book-extra .quarter-divider { margin-top: 0; }
 
+  .field-guide-desc strong { color: var(--cream); font-weight: 500; }
+
+  /* ── EXCERPT ── */
+  .excerpt {
+    padding: 7rem 0;
+    background: var(--green-dark);
+    border-top: 1px solid var(--green-mid);
+  }
+  .excerpt-inner { max-width: 720px; margin: 0 auto; }
+  .excerpt h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 2.2rem;
+  }
+  .excerpt p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.12rem;
+    line-height: 1.8;
+    color: var(--cream);
+    margin-bottom: 1.4rem;
+  }
+  .excerpt .excerpt-source {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-bright);
+    margin-top: 2.2rem;
+    margin-bottom: 0;
+  }
+
   /* ── COLLEGES ── */
   .colleges {
     padding: 7rem 0;
@@ -940,7 +974,8 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 860px) {
     .hero-thesis { margin: -1.2rem 0 2.2rem; }
-    .ideas, .colleges { padding: 5rem 0; }
+    .ideas, .colleges, .excerpt { padding: 5rem 0; }
+    .excerpt p { font-size: 1.02rem; }
     .ideas-grid, .book-extra { grid-template-columns: 1fr; gap: 1.2rem; }
     .colleges-inner { grid-template-columns: 1fr; gap: 2rem; }
     .concepts-bar-inner { gap: 0.4rem 1.4rem; }
@@ -1217,8 +1252,25 @@
       <div class="quarter-divider field-guide-block">
         <div class="quarter-label">Part Two</div>
         <div class="quarter-title">The Field Manual</div>
-        <div class="field-guide-desc">Nine practical modules for problems that come up at any stage: negotiating pay, working with a boss, hiring, firing and getting through a slump. Written to be used again as the job changes.</div>
+        <div class="field-guide-desc">Nine sections organized by topic, not career stage, to return to as the job changes.</div>
+        <div class="field-guide-desc"><strong>Your Foundation:</strong> Professional Free Agency, Goal Setting, Financial Fitness</div>
+        <div class="field-guide-desc"><strong>Your Team:</strong> Networking &amp; Relationship Capital; Working with Your Boss; Hiring Stars, Giving Feedback &amp; Letting People Go</div>
+        <div class="field-guide-desc"><strong>Your Performance:</strong> Digital Edge, Sales &amp; Storytelling, Mindset &amp; The Long Game</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCERPT -->
+<section class="excerpt" id="excerpt">
+  <div class="container">
+    <div class="excerpt-inner">
+      <div class="section-label">An Excerpt</div>
+      <h2>Leading Without the Captain&rsquo;s Armband</h2>
+      <p>My senior year, I thought I was going to be named captain, but I did not get the captain&rsquo;s armband from my coach. On a particularly memorable day, we were playing in the snow. Our opponent tried to cancel the game, but we were already 2.5 hours into our icy road journey. A key teammate forgot his screw-in cleats, and someone smashed our van window to steal our pre-game gear. We played so poorly in the first half, going down 4-1, that our coach, after ripping into us for our poor play and still flustered by the day&rsquo;s pre-game activities, failed to give us the second half lineup. As we all walked out of the locker room and huddled as a team, a teammate asked, &ldquo;Scott, who&rsquo;s starting?&rdquo; I looked around for the coaches and realized no one was coming, and the team was waiting on me. I then responded, giving the lineup and a few tactical thoughts. A teammate scored almost immediately, I followed with another to make it 4-3. We didn&rsquo;t make it all the way back and lost the game, but that wasn&rsquo;t the story.</p>
+      <p>Not being named captain hurt quite a bit when it was announced, but I look back on that season as one of my proudest and most formative. As the season progressed, I put my disappointment aside and focused on leading on and off the field without the title. I had freshmen and sophomores over to my house to watch the big sporting events. On the field, I tried to be the emotional leader, especially when things were not going our way. My lack of captaincy could have left me bitter, but in an odd way I learned more about leadership that season than I might have if I had been named captain.</p>
+      <p>In every office there is the org chart, and then there is the unofficial org chart. If people routinely come to you when deciding what move to make, you&rsquo;re leading, title or not.</p>
+      <p class="excerpt-source">From Chapter 5 &middot; Captains and Quarterbacks</p>
     </div>
   </div>
 </section>
