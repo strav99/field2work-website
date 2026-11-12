@@ -405,36 +405,12 @@
     position: relative;
   }
 
-  .forwho-pull::before {
-    content: '"';
+  .forwho-pull-text {
     font-family: 'Playfair Display', serif;
-    font-size: 8rem;
-    line-height: 0.6;
-    color: var(--green-accent);
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    opacity: 0.5;
-  }
-
-  .forwho-pull blockquote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.3rem;
-    line-height: 1.55;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.5;
     color: var(--cream);
-    padding-top: 2rem;
-  }
-
-  .forwho-pull cite {
-    display: block;
-    margin-top: 1.5rem;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--green-bright);
   }
 
   /* ── PLAYBOOK / CHAPTERS ── */
@@ -1000,8 +976,7 @@
     .forwho { padding: 4rem 0; }
     .forwho h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); white-space: normal; }
     .forwho-pull { padding: 2rem; }
-    .forwho-pull::before { font-size: 5rem; }
-    .forwho-pull blockquote { font-size: 1.1rem; }
+    .forwho-pull-text { font-size: 1.15rem; }
 
     .playbook { padding: 5rem 0; }
     .chapter { grid-template-columns: 48px 1fr; gap: 1rem; padding: 1.4rem 0; }
@@ -1051,7 +1026,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg-text">WIN</div>
-  <div class="hero-eyebrow">The Book · Coming Soon</div>
+  <div class="hero-eyebrow">The Book · Manuscript in Progress</div>
   <h1 class="wordmark"><span class="field">Field</span><span class="work">Work</span></h1>
   <p class="hero-subtitle">How lessons from the playing field translate to success at work.</p>
   <p class="hero-thesis">The definition of winning changes at every stage of a career. The costly mistake is to keep playing by a scoreboard that no longer applies.</p>
@@ -1112,11 +1087,11 @@
       </div>
       <div class="idea">
         <div class="idea-title">Some habits carry over. Some don&rsquo;t.</div>
-        <p>Preparation and coachability travel well. Waiting for the coach to tell you what to do doesn&rsquo;t. <em>FieldWork</em> sorts out which is which.</p>
+        <p>Preparation and coachability travel well. Waiting for the coach to tell you what to do doesn&rsquo;t, and neither does assuming the talent that got you here will carry you to the next level. That assumption is the Talent Trap. <em>FieldWork</em> sorts out which habits to keep and which to retire.</p>
       </div>
       <div class="idea">
-        <div class="idea-title">Life has two scorecards</div>
-        <p>One tracks titles and salary. The other tracks relationships and the people you helped along the way. Both are being scored from the first job on.</p>
+        <div class="idea-title">Life has two scoreboards</div>
+        <p>The Career Scoreboard tracks titles and salary. The Life Scoreboard tracks relationships and the people you helped along the way. Both are being scored from the first job on.</p>
       </div>
     </div>
   </div>
@@ -1130,15 +1105,13 @@
         <div class="section-label">Who It&rsquo;s For</div>
         <h2>For athletes building <em>careers after the game.</em></h2>
         <ul class="check-list">
-          <li>You played at any level, from rec league to Division I, and it shaped how you work.</li>
-          <li>You work hard, but what your employer values isn&rsquo;t always obvious.</li>
-          <li>You&rsquo;re starting your first job, taking responsibility for a team, or figuring out what comes next.</li>
+          <li><strong>You played at any level, from rec league to Division I, and you&rsquo;re starting a career or trying to move up in one.</strong></li>
+          <li>You&rsquo;re in your first job, taking responsibility for a team, or figuring out what comes next.</li>
+          <li>Or you never played, but you work hard and what your employer values isn&rsquo;t always obvious.</li>
         </ul>
       </div>
       <div class="forwho-pull">
-        <blockquote>
-          <em>FieldWork</em> is the playbook no one handed you when your playing days ended.
-        </blockquote>
+        <p class="forwho-pull-text"><em>FieldWork</em> is the playbook no one handed you when your playing days ended.</p>
       </div>
     </div>
   </div>
@@ -1222,13 +1195,13 @@
 
       <div class="quarter-divider">
         <div class="quarter-label">Fourth Quarter</div>
-        <div class="quarter-title">Beyond the Scoreboard</div>
+        <div class="quarter-title">The Other Scoreboard</div>
       </div>
       <div class="chapter last-of-quarter">
         <div class="chapter-num">08</div>
         <div class="chapter-body">
           <div class="chapter-title">The MVP Mindset</div>
-          <div class="chapter-sub">Life has two scorecards. Are you winning on both?</div>
+          <div class="chapter-sub">Winning Beyond the Game. Life has two scoreboards. Are you winning on both?</div>
         </div>
       </div>
 
@@ -1259,7 +1232,7 @@
       </div>
       <div class="colleges-right">
         <p><em>FieldWork</em> is written for athletes moving from competitive sport into professional life, which makes it a natural fit for student-athlete development programs and career-readiness courses.</p>
-        <p>Speaking topics include <strong>the Talent Trap</strong>, <strong>the Identity Gap</strong> and <strong>the Two Scorecards</strong>. An academic edition with classroom exercises is in development.</p>
+        <p>Speaking topics include <strong>the Talent Trap</strong>, <strong>the Identity Gap</strong> and <strong>the Two Scoreboards</strong>.</p>
         <p>For speaking or program inquiries, email <a href="mailto:scott@field2work.com">scott@field2work.com</a>.</p>
       </div>
     </div>
@@ -1278,6 +1251,8 @@
           <div class="cred">CFO of the Year</div>
           <div class="cred">Cover, CFO Magazine</div>
           <div class="cred">Co-founder &amp; CEO, GreaterGoal</div>
+          <div class="cred">Co-founder, Swell Property</div>
+          <div class="cred">Co-founder, Remain Life Insurance</div>
           <div class="cred">Bay Area Olympic bid committee</div>
           <div class="cred">College coach</div>
           <div class="cred">College and USISL player</div>
